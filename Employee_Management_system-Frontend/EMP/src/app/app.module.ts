@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { AddempComponent } from './employee/components/addemp/addemp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeListComponent } from './employee/components/employee-list/employee-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddempComponent
+    AddempComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
