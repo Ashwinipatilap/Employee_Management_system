@@ -13,4 +13,5 @@ export class EmployeeService {
   AddEmployee(emp:any):Observable<any>{
     return this._http.post<any>(this.basicUrl+"/addEmp",emp);
   }
+  
 }

@@ -1,5 +1,7 @@
 package com.emp.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,11 @@ public class employeeServiceIMPL implements IemployeeService {
 	public Employee addEmp(Employee emp) {
 		// TODO Auto-generated method stub
 		return emprepo.save(emp);
+	}
+	@Override
+	public List<Employee> getEmp() {
+		// TODO Auto-generated method stub
+		return emprepo.findAll();
 	}
 	
 	

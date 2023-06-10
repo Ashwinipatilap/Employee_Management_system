@@ -52,4 +52,6 @@ export class AddempComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getAllEmployee
+
 }
