@@ -13,5 +13,7 @@ export class EmployeeService {
   AddEmployee(emp:any):Observable<any>{
     return this._http.post<any>(this.basicUrl+"/addEmp",emp);
   }
-  
+  getEmployee():Observable<any>{
+    return this._http.get<any>(this.basicUrl+"/getEmp");
+  }
 }
