@@ -1,1 +1,30 @@
-<p>addemp works!</p>
+<html>
+    <header>
+
+    </header>
+    <body>
+        <form [formGroup]="employeeForm" (ngSubmit)="onAdd(employeeForm)">
+            <div>
+                <label>First Name</label>
+                <input type="text" formControlName="firstName" placeholder="Enter first name"/>
+            </div>
+            <br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" formControlName="lastName" placeholder="Enter last name"/>
+            </div>
+            <br>
+            <div>
+                <label>EmailId</label>
+                <input type="text" formControlName="emailId" placeholder="Enter emailId"/>
+            </div>
+            <br>
+            <div>
+                <label>contact Number</label>
+                <input type="text" formControlName="contactNumber" placeholder="Enter contact number"/>
+            </div>
+            <br>
+            <button >Add</button>
+        </form>
+    </body>
+</html>
