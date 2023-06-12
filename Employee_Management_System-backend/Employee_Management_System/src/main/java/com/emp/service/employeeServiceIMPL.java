@@ -23,6 +23,16 @@ public class employeeServiceIMPL implements IemployeeService {
 		// TODO Auto-generated method stub
 		return emprepo.findAll();
 	}
+	@Override
+	public Employee editEmp(int id, Employee emp) {
+		Employee newemp = emprepo.findById(id);
+		
+		newemp.setFirstName(emp.getFirstName());
+		newemp.setLastName(emp.getLastName());
+		newemp.setEmailId(emp.getEmailId());
+		newemp.setContactNumber(emp.getContactNumber());
+		return emprepo.save(newemp);
+	}
 	
 	
 
