@@ -11,6 +11,7 @@ import { EmployeeService } from '../../utility/employee.service';
 export class EmployeeListComponent implements OnInit {
 
   employeelist:any[]=[]
+  id:any
   constructor(private fb :FormBuilder,
     private router:Router,
     private empserv:EmployeeService,
@@ -18,6 +19,7 @@ export class EmployeeListComponent implements OnInit {
     private ngZone: NgZone) { }
 
   ngOnInit(): void {
+    this.id=this.activatedRoute.snapshot.params['id'];
     this.getAllEmployeeList();
   }
 
@@ -34,4 +36,8 @@ export class EmployeeListComponent implements OnInit {
     this.ngZone.run(() => this.router.navigateByUrl('/emp/updateemp/'+id))
     
   }
+  onDelete(id:any){
+   this.empserv.deleteEmployee(id).subscribe(data=>{
+    console.log(data);
+   })  }
 }
