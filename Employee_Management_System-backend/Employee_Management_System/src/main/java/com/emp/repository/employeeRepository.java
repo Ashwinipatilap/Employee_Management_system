@@ -7,4 +7,5 @@ import com.emp.model.Employee;
 @Repository
 public interface employeeRepository extends JpaRepository<Employee,Integer> {
 
+	public Employee findById(int id);
 }
