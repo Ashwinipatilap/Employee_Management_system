@@ -25,4 +25,8 @@ export class EmployeeService {
    
     return this._http.put<any>(this.basicUrl+"/editEmp/"+id,emp);
   }
+
+  deleteEmployee(id:any):Observable<any>{
+    return this._http.delete<any>(this.basicUrl+"/deleteEmp/"+id);
+  }
 }

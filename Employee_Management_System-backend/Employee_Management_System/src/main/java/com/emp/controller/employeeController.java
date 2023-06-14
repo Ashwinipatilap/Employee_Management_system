@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -64,5 +65,14 @@ public class employeeController {
 		}
 	}
 	
+	@DeleteMapping("/deleteEmp/{id}")
+	public ResponseEntity<String> deleteEmp(@PathVariable int id){
+		String str = empserv.deleteEmployee(id);
+		if(str != null) {
+			return ResponseEntity.ok().body(str);
+		}else {
+			return ResponseEntity.status(404).body(null);
+		}
+	}
 
 }

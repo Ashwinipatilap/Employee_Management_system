@@ -7,6 +7,7 @@ import { UpdateEmpComponent } from '../../components/update-emp/update-emp.compo
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeListComponent } from '../../components/employee-list/employee-list.component';
+import { DeleteEmpComponent } from '../../components/delete-emp/delete-emp.component';
 
 
 
@@ -14,7 +15,8 @@ import { EmployeeListComponent } from '../../components/employee-list/employee-l
 @NgModule({
   declarations: [
    EmployeeListComponent,
-    UpdateEmpComponent
+    UpdateEmpComponent,
+    DeleteEmpComponent,
   ],
   imports: [
     CommonModule,
