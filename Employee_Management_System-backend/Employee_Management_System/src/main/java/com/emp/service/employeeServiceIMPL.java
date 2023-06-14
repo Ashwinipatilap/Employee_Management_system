@@ -38,6 +38,13 @@ public class employeeServiceIMPL implements IemployeeService {
 		// TODO Auto-generated method stub
 		return this.emprepo.findById(id);
 	}
+	@Override
+	public String deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		Employee emp = emprepo.findById(id);
+		emprepo.delete(emp);
+		return "Employee Deleted";
+	}
 	
 	
 

@@ -14,6 +14,7 @@ public List<Employee> getEmp();
 public Employee editEmp(int id,Employee emp);
 
 public Employee getEmp(int id);
+public String deleteEmployee(int id);
 
 
 }
