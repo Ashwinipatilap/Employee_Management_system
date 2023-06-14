@@ -1,0 +1,31 @@
+<html>
+    <header>
+
+    </header>
+    <body>
+        <form  (ngSubmit)="onUpdate()">
+            <div>
+                <label>First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="employee.firstName" placeholder="Enter first name"/>
+            </div>
+            <br>
+            <div>
+                <label>Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="employee.lastName" placeholder="Enter last name"/>
+            </div>
+            <br>
+            <div>
+                <label>EmailId</label>
+                <input type="text" class="form-control" id="emailId" name="emailId" [(ngModel)]="employee.emailId" placeholder="Enter emailId"/>
+            </div>
+            <br>
+            <div>
+                <label>contact Number</label>
+                <input type="text" class="form-control" id="contactNumber" name="contactNumber"  [(ngModel)]="employee.contactNumber" placeholder="Enter contact number"/>
+            </div>
+            <br>
+            <button type="submit" >Add</button>
+          
+        </form>
+    </body>
+</html>

@@ -42,6 +42,16 @@ public class employeeController {
 		}
 		
 	}
+	@GetMapping("/getEmpById/{id}")
+	public ResponseEntity<Employee> getEmployeeById(@PathVariable int id){
+		Employee emplist = empserv.getEmp(id);
+		if(emplist != null) {
+			return ResponseEntity.ok().body(emplist);
+		}else {
+			return ResponseEntity.status(404).body(null);
+		}
+		
+	}
 	
 	@PutMapping("/editEmp/{id}")
 	public ResponseEntity<Employee> editEmp(@PathVariable int id,@RequestBody Employee emp){

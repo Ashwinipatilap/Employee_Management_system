@@ -13,4 +13,7 @@ public Employee addEmp(Employee emp);
 public List<Employee> getEmp();
 public Employee editEmp(int id,Employee emp);
 
+public Employee getEmp(int id);
+
+
 }

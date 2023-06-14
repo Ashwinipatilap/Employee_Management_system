@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from '../../utility/employee.service';
 
 @Component({
@@ -13,7 +13,9 @@ export class EmployeeListComponent implements OnInit {
   employeelist:any[]=[]
   constructor(private fb :FormBuilder,
     private router:Router,
-    private empserv:EmployeeService) { }
+    private empserv:EmployeeService,
+    private activatedRoute: ActivatedRoute,
+    private ngZone: NgZone) { }
 
   ngOnInit(): void {
     this.getAllEmployeeList();
@@ -26,4 +28,10 @@ export class EmployeeListComponent implements OnInit {
     })
   }
 
+  onEdit(id:any){
+    
+  
+    this.ngZone.run(() => this.router.navigateByUrl('/emp/updateemp/'+id))
+    
+  }
 }

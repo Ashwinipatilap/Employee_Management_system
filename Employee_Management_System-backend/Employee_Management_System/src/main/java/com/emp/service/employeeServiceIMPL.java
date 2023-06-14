@@ -33,6 +33,11 @@ public class employeeServiceIMPL implements IemployeeService {
 		newemp.setContactNumber(emp.getContactNumber());
 		return emprepo.save(newemp);
 	}
+	@Override
+	public Employee getEmp(int id) {
+		// TODO Auto-generated method stub
+		return this.emprepo.findById(id);
+	}
 	
 	
 
